@@ -8,11 +8,11 @@ from pyppeteer import launch
 
 
 async def init_browser_page():
-        browser = await launch({'headless': True})
-        page = await browser.newPage()
-        await page.setRequestInterception(True)
-        page.on('request', lambda req: asyncio.ensure_future(intercept_blocker(req)))
-        return browser, page
+    browser = await launch({'headless': True})
+    page = await browser.newPage()
+    await page.setRequestInterception(True)
+    page.on('request', lambda req: asyncio.ensure_future(intercept_blocker(req)))
+    return browser, page
 
 
 async def get_rhyme(page, word) -> list:
@@ -86,11 +86,10 @@ def load_words() -> list:
     return words
 
 
-
-
 words = load_words()
 seconds = 3
 root = Tk()
+root.title("RAP Генератор III")
 loop = asyncio.get_event_loop()
 browser, page = loop.run_until_complete(init_browser_page())
 root.geometry('1600x900')
@@ -105,4 +104,3 @@ label4.pack(fill=BOTH, expand=1)
 root.after(2000, before_start)
 root.protocol("WM_DELETE_WINDOW", on_closing)
 root.mainloop()
-
