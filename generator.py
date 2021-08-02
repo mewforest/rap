@@ -50,6 +50,8 @@ def generate_words():
     rhyme_words = []
     for word in random_words:
         rhymes = loop.run_until_complete(get_rhyme(page, word))
+        if len(rhymes) == 0:
+            rhymes = ['-']
         rhyme_words.append(random.choice(rhymes[:10] if len(rhymes) > 10 else rhymes))
     label1['text'] = ' '.join(random_words[:3])
     label2['text'] = ' '.join(rhyme_words[:3])
