@@ -4,12 +4,14 @@
 
 ---
 
-# Запуск
+# Установка
 
 Установка зависимостей (требуется установленный Python 3.6+ и Google Chrome):
 ```shell
 python -m pip install ./requirements.txt --user
 ```
+
+# Запуск
 
 Запуск программы:
 ```shell
@@ -17,7 +19,8 @@ python ./generator.py
 ```
 # Скриншоты
 
-![example](https://cloud.screenpresso.com/cHZKf/2021-08-02_20h04_47.png)
+![2021-08-02_20h04_37](https://user-images.githubusercontent.com/15357833/127900245-859ab6f6-8f00-4b08-b81c-11fc0f7ae503.png)
+![2021-08-02_20h04_47](https://user-images.githubusercontent.com/15357833/127900250-01e5580f-583b-497e-b96c-4c039aa7a5e8.png)
 
 
 # Подробнее
